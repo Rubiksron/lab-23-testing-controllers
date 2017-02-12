@@ -7,29 +7,29 @@ module.exports = {
   entry: `${__dirname}/app/entry.js`,
   output: {
     filename: 'bundle.js',
-    path: 'build'
+    path: 'build',
   },
   plugins: [
     new HTMLPlugin({
-      template: `${__dirname}/app/index.html`
+      template: `${__dirname}/app/index.html`,
     }),
-    new ExtractTextPlugin('bundle.css')
+    new ExtractTextPlugin('bundle.css'),
   ],
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel',
       },
       {
         test: /\.scss$/,
-        loader: 'style!css!sass!'
+        loader: 'style!css!sass!',
       },
       {
         test: /\.(eot|woff|ttf|svg).*/,
-        loader: 'url?limit=10000&name=fonts/[hash].[ext]'
-      }
-    ]
-  }
+        loader: 'url?limit=10000&name=fonts/[hash].[ext]',
+      },
+    ],
+  },
 };
