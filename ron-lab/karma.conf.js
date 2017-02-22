@@ -1,5 +1,5 @@
 const webpackConfig = require('./webpack.config.js');
-webpackConfig.entry = {};
+delete webpackConfig.entry;
 
 module.exports = function(config) {
   config.set({
@@ -7,12 +7,12 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['jasmine'],
     files: [
-      'test/**/*-test.js'
+      'test/**/*-test.js',
     ],
     exclude: [
     ],
     preprocessors: {
-      'test/**/*-test.js': ['webpack']
+      'test/**/*-test.js': ['webpack'],
     },
     reporters: ['progress'],
     port: 9876,
@@ -21,6 +21,6 @@ module.exports = function(config) {
     autoWatch: true,
     browsers: ['PhantomJS'],
     singleRun: false,
-    concurrency: Infinity
+    concurrency: Infinity,
   });
 };

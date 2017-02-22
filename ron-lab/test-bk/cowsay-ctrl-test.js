@@ -3,7 +3,7 @@ require('./test-helper');
 let angular = require('angular');
 let cowsay = require('cowsay-browser');
 
-describe('Coway Controller', function() {
+describe('Cowsay Controller', function() {
   beforeEach(function() {
     angular.mock.module('cowsayApp');
     angular.mock.inject(function($controller) {

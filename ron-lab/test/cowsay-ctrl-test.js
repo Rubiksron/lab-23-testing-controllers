@@ -57,5 +57,20 @@ describe('Cowsay Controller', function() {
       expect(this.cowsayCtrl.history.length).toEqual(0);
     });
   });
-});
 
+  describe('NavController', function() {
+    beforeEach(() => {
+      angular.mock.module('cowsayApp');
+      angular.mock.inject($controller => {
+        this.navCtrl = new $controller('NavController')
+      });
+    });
+
+    describe('cotroller properties', () => {
+      it('should have these properties', () => {
+        console.log(this.navCtrl);
+        expect(this.navCtrl.routes[0].name).toBe('home')
+      });
+    });
+  });
+});

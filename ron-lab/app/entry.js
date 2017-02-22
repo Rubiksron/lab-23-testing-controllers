@@ -36,7 +36,7 @@ function CowsayController($log) {
     this.history.pop();
     this.spoken = this.history.pop() || '';
   };
-};
+}
 
 cowsayApp.controller('NavController', ['$log', NavController]);
 
@@ -46,15 +46,15 @@ function NavController($log) {
   this.routes = [
     {
       name: 'home',
-      url: '/home'
+      url: '/home',
     },
     {
       name: 'about',
-      url: '/about-us'
+      url: '/about-us',
     },
     {
       name: 'contact',
-      url: '/contact-us'
-    }
+      url: '/contact-us',
+    },
   ];
-};
+}

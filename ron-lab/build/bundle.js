@@ -84,7 +84,7 @@
 	    this.history.pop();
 	    this.spoken = this.history.pop() || '';
 	  };
-	};
+	}
 
 	cowsayApp.controller('NavController', ['$log', NavController]);
 
@@ -101,7 +101,7 @@
 	    name: 'contact',
 	    url: '/contact-us'
 	  }];
-	};
+	}
 
 /***/ },
 /* 1 */
