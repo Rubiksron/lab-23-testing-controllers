@@ -37,6 +37,14 @@ describe('Cowsay Controller', function() {
       expect(result).toEqual(expected);
     });
   });
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  // describe('#update', () => {
+  //   it('should show title property of "update method"', () => {
+  //     let expected = cowsay.update.title({ title: 'update method'});
+  //     expect(expected).toEqual('update method');
+  //   });
+  // });
+  //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   describe('#speak', () => {
     it('should return a cow that says testing', () => {
@@ -57,20 +65,19 @@ describe('Cowsay Controller', function() {
       expect(this.cowsayCtrl.history.length).toEqual(0);
     });
   });
+});
 
-  describe('NavController', function() {
-    beforeEach(() => {
-      angular.mock.module('cowsayApp');
-      angular.mock.inject($controller => {
-        this.navCtrl = new $controller('NavController')
-      });
+describe('NavController', function() {
+  beforeEach(() => {
+    angular.mock.module('cowsayApp');
+    angular.mock.inject($controller => {
+      this.navCtrl = new $controller('NavController');
     });
+  });
 
-    describe('cotroller properties', () => {
-      it('should have these properties', () => {
-        console.log(this.navCtrl);
-        expect(this.navCtrl.routes[0].name).toBe('home')
-      });
+  describe('router properties: ', () => {
+    it('should have an array of routes ', () => {
+      expect(Array.isArray(this.navCtrl.routes)).toBe(true);
     });
   });
 });

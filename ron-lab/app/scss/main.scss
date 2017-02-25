@@ -76,6 +76,9 @@ nav {
   background: $black;
   padding: 2vw;
   margin-bottom: $gutter-std;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;;
 
   li {
     display: inline-block;
@@ -90,8 +93,10 @@ nav {
 }
 
 .container {
-  width: 80%;
+  width: 60%;
   margin-left: 10%;
+  display: flex;
+  flex-direction: column;
 }
 
 .text-binder {

@@ -22,6 +22,7 @@ function CowsayController($log) {
 
   this.update = function(input) {
     $log.debug('cowsayCtrl.update()');
+    // this.title = 'update method';
     return cowsay.say({ text: input || 'moooooooo', f: this.current });
   };
 
