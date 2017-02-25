@@ -37,14 +37,6 @@ describe('Cowsay Controller', function() {
       expect(result).toEqual(expected);
     });
   });
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-  // describe('#update', () => {
-  //   it('should show title property of "update method"', () => {
-  //     let expected = cowsay.update.title({ title: 'update method'});
-  //     expect(expected).toEqual('update method');
-  //   });
-  // });
-  //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   describe('#speak', () => {
     it('should return a cow that says testing', () => {
@@ -80,4 +72,41 @@ describe('NavController', function() {
       expect(Array.isArray(this.navCtrl.routes)).toBe(true);
     });
   });
+
+  describe('router should have router property of name ', () => {
+    it('should return a property of name: home ', () => {
+      expect(this.navCtrl.routes[0].name).toBe('home');
+    });
+  });
+
+  describe('router objects should have router property of url ', () => {
+    it('should return a  url property of "/home"', () => {
+      expect(this.navCtrl.routes[0].url).toBe('/home');
+    });
+  });
+
+  describe('router should have router property of name ', () => {
+    it('should return a property of name: about ', () => {
+      expect(this.navCtrl.routes[1].name).toBe('about');
+    });
+  });
+
+  describe('router objects should have router property of url ', () => {
+    it('should return a  url property of "/about-us"', () => {
+      expect(this.navCtrl.routes[1].url).toBe('/about-us');
+    });
+  });
+
+  describe('router should have router property of name ', () => {
+    it('should return a property of name: contact ', () => {
+      expect(this.navCtrl.routes[2].name).toBe('contact');
+    });
+  });
+
+  describe('router objects should have router property of url ', () => {
+    it('should return a  url property of "/contact-us"', () => {
+      expect(this.navCtrl.routes[2].url).toBe('/contact-us');
+    });
+  });
+
 });
